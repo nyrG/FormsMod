@@ -13,14 +13,14 @@ namespace Module.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Form_1a()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Form_1b()
         {
             ViewBag.Message = "Your contact page.";
 
