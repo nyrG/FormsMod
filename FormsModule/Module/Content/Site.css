@@ -1,4 +1,5 @@
 ﻿body {
+    font-family: 'Open Sans', sans-serif;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -27,4 +28,51 @@ textarea {
 .navbar-inverse .navbar-toggle:focus {
     background-color: #777;
     border-color: #fff
+}
+
+.fa {
+    text-align: center;
+    padding: 20px;
+    font-size: 60px;
+}
+
+.form-1 {
+    background-color: #d72830;
+}
+
+.form-2 {
+    background-color: #4bb54a;
+}
+
+.form-3 {
+    background-color: #4564ba;
+ 
+}
+
+.card {
+    padding: 15px;
+    margin: 30px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.01);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-main {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    padding: 15px 0;
+    color: #fff;
+}
+
+.main-description {
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
 }

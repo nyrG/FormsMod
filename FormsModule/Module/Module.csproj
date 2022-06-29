@@ -160,11 +160,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Form_1a.cshtml" />
     <Content Include="Views\Home\Form_1b.cshtml" />
+    <Content Include="Views\Home\Form_1c.cshtml" />
+    <Content Include="Views\Home\Form-2b.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

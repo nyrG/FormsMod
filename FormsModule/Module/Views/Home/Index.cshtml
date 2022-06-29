@@ -2,30 +2,120 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Forms</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="container">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="row">
+        <a href="@Url.Action("Form_1a", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <div class="col-xs-4">
+                <div class="card form-1">
+                    <div class="card-main">
+                        <i class="fa fa-file-text"></i>
+                        <div class="main-description">
+                            <h2><strong>Form 1A</strong></h2>
+                            <p>Birth Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>  
+        <a href="@Url.Action("Form_1b", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <div class="col-xs-4">
+                <div class="card form-1">
+                    <div class="card-main">
+                        <i class="fa fa-file-text"></i>
+                        <div class="main-description">
+                            <h2><strong>Form 1B</strong></h2>
+                            <p>Birth-not Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="@Url.Action("Form_1c", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <div class="col-xs-4">
+                <div class="card form-1">
+                    <div class="card-main">
+                        <i class="fa fa-file-text"></i>
+                        <div class="main-description">
+                            <h2><strong>Form 1C</strong></h2>
+                            <p>Birth Destroyed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    
+    <div class="row">
+        <a href="@Url.Action("Form_2a", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <div class="col-xs-4">
+                <div class="card form-2">
+                    <div class="card-main">
+                        <i class="fa fa-file-text"></i>
+                        <div class="main-description">
+                            <h2><strong>Form 2A</strong></h2>
+                            <p>Death Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>       
+        <a href="@Url.Action("Form_2b", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <div class="col-xs-4">
+                <div class="card form-2">
+                    <div class="card-main">
+                        <i class="fa fa-file-text"></i>
+                        <div class="main-description">
+                            <h2><strong>Form 2B</strong></h2>
+                            <p>Death-not Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </a>       
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+    <div class="row">
+        <a href="@Url.Action("Form_3a", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <div class="col-xs-4">
+                <div class="card form-3">
+                    <div class="card-main">
+                        <i class="fa fa-file-text"></i>
+                        <div class="main-description">
+                            <h2><strong>Form 3A</strong></h2>
+                            <p>Marriage Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="@Url.Action("Form_3b", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <div class="col-xs-4">
+                <div class="card form-3">
+                    <div class="card-main">
+                        <i class="fa fa-file-text"></i>
+                        <div class="main-description">
+                            <h2><strong>Form 3B</strong></h2>
+                            <p>Marriage-not Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>       
+        <a href="@Url.Action("Form_3a", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <div class="col-xs-4">
+                <div class="card form-3">
+                    <div class="card-main">
+                        <i class="fa fa-file-text"></i>
+                        <div class="main-description">
+                            <h2><strong>Form 3C</strong></h2>
+                            <p>Marriage Destroyed</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </a>        
     </div>
 </div>
