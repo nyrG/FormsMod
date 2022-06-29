@@ -15,15 +15,11 @@ namespace Module.Controllers
 
         public ActionResult Form_1a()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Form_1b()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
