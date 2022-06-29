@@ -164,7 +164,7 @@
     <Content Include="Views\Home\Form_1a.cshtml" />
     <Content Include="Views\Home\Form_1b.cshtml" />
     <Content Include="Views\Home\Form_1c.cshtml" />
-    <Content Include="Views\Home\Form-2b.cshtml" />
+    <Content Include="Views\Home\Form_2a.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -27,5 +27,10 @@ namespace Module.Controllers
         {
             return View();
         }
+
+        public ActionResult Form_2a()
+        {
+            return View();
+        }
     }
 }
