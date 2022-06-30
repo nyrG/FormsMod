@@ -1,22 +1,181 @@
 ﻿@{
-    ViewBag.Title = "Form_1a";
+    ViewBag.Title = "form_1a";
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>Form 1a</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!DOCTYPE html>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />   
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container" style="width:40%;margin-top:2%">
+        <form id="myForm">
+            Fill-up All Fields
+            <table>
+               
+                <tr>
+                    <td>Date</td>
+                    <td>:</td>
+                    
+                    <td>@Html.TextBoxFor(model => model.entry, new { @class = "form-control" , @id="entry"})</td>
+                </tr>
+                <tr>
+                    <td>Page</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.page, new { @class = "form-control", @placeholder = "Page Number" })</td>
+                </tr>
+                <tr>
+                    <td>Book Number</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.book, new { @class = "form-control", @placeholder = "Book Number" })</td>
+                </tr>
+                <tr>
+                    <td>LCR Registry Number</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.lcr_reg_no, new { @class = "form-control", @placeholder = "LCR Registration Number" })</td>
+                </tr>
+                <tr>
+                    <td>Date of Registration</td>
+                    <td>:</td>
+                    <td>@Html.EditorFor(model => model.date_of_reg, new { @class = "datepicker", @placeholder = "Date of Registration" })</td>
+                </tr>
+                <tr>
+                    <td>Name of Child</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.name_child, new { @class = "form-control", @placeholder = "Name of Child" })</td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.sex, new { @class = "form-control", @placeholder = "Sex" })</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>:</td>
+                    <td>@Html.EditorFor(model => model.date_of_birth, new { @class = "datepicker", @placeholder = "Date of Birth" })</td>
+                </tr>
+                <tr>
+                    <td>Place of Birth</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.place_of_birth, new { @class = "form-control", @placeholder = "Place of Birth" })</td>
+                </tr>
+                <tr>
+                    <td>Name of Mother</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.name_of_mother, new { @class = "form-control", @placeholder = "Name of Mother" })</td>
+                </tr>
+                <tr>
+                    <td>Citizenship of Mother</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.citizenship_of_mother, new { @class = "form-control", @placeholder = "Citizenship of Mother" })</td>
+                </tr>
+                <tr>
+                    <td>Name of Father</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.name_of_father, new { @class = "form-control", @placeholder = "Name of Father" })</td>
+                </tr>
+                <tr>
+                    <td>Citizenship of Father</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.citizenship_of_father, new { @class = "form-control", @placeholder = "Citizenship of Father" })</td>
+                </tr>
+                <tr>
+                    <td>Date of Marriage of Parents</td>
+                    <td>:</td>
+                    <td>@Html.EditorFor(model => model.date_of_marriage_of_parents, new { @class = "datepicker", @placeholder = "Date of Marriage of Parents" })</td>
+                </tr>
+                <tr>
+                    <td>Place of Marriage of Parents</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.place_of_marriage_of_parents, new { @class = "form-control", @placeholder = "Place of Marriage of Parents" })</td>
+                </tr>
+                <tr>
+                    <td>Issued to</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.issued_to, new { @class = "form-control", @placeholder = "Issued To" })</td>
+                </tr>
+                <tr>
+                    <td>Officer</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.officer_name, new { @class = "form-control", @placeholder = "Officer Name" })</td>
+                </tr>
+                <tr>
+                    <td>Officer Title</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.officer_title, new { @class = "form-control", @placeholder = "Officer Title" })</td>
+                </tr>
+                <tr>
+                    <td>Verifier</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.verifier_name, new { @class = "form-control", @placeholder = "Verifier Name" })</td>
+                </tr>
+                <tr>
+                    <td>Verifier Title</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.verifier_title, new { @class = "form-control", @placeholder = "Verifier Title" })</td>
+                </tr>
+                <tr>
+                    <td>Amount Paid</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.payment, new { @class = "form-control", @placeholder = "Payment" })</td>
+                </tr>
+                <tr>
+                    <td>O.R. Number</td>
+                    <td>:</td>
+                    <td>@Html.TextBoxFor(model => model.or_no, new { @class = "form-control", @placeholder = "OR Number" })</td>
+                </tr>
+                <tr>
+                    <td>Date Paid</td>
+                    <td>:</td>
+                    <td>@Html.EditorFor(model => model.date_paid, new { @class = "datepicker", @placeholder = "Date Paid" })</td>
+                </tr>
+            </table><br>
+            <input type="Submit" value="Submit" class="btn btn-block btn-primary" id="btnSubmit" />
+        </form>
+
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+   
+    <script type="text/javascript">
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+        var optSimple = {
+            format: 'mm-dd-yyyy',
+            todayHighlight: true,
+            orientation: 'bottom right',
+            autoclose: true,
+            inline: true,
+        };
+
+        $('#entry').datepicker(optSimple);
+        $('#entry').datepicker('setDate', today);
+
+        $(document).ready(function () {
+            $("#btnSubmit").click(function () {
+                debugger
+                var data = $("#myForm").serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/form_1a",
+                    data: data,
+                    success: function (response) {
+                        alert("Successful");
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
+01865">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Get more libraries</h2>
