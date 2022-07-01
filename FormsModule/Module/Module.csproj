@@ -165,6 +165,10 @@
     <Content Include="Views\Home\form_1b.cshtml" />
     <Content Include="Views\Home\form_1c.cshtml" />
     <Content Include="Views\Home\form_2a.cshtml" />
+    <Content Include="Views\Home\form_2b.cshtml" />
+    <Content Include="Views\Home\form_3a.cshtml" />
+    <Content Include="Views\Home\form_3b.cshtml" />
+    <Content Include="Views\Home\form_3c.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

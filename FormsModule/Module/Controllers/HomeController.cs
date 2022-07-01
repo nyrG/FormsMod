@@ -13,22 +13,38 @@ namespace Module.Controllers
             return View();
         }
 
-        public ActionResult Form_1a()
+        public ActionResult form_1a()
         {
             return View();
         }
 
-        public ActionResult Form_1b()
+        public ActionResult form_1b()
         {
             return View();
         }
 
-        public ActionResult Form_1c()
+        public ActionResult form_1c()
         {
             return View();
         }
 
-        public ActionResult Form_2a()
+        public ActionResult form_2a()
+        {
+            return View();
+        }
+        public ActionResult form_2b()
+        {
+            return View();
+        }
+        public ActionResult form_3a()
+        {
+            return View();
+        }
+        public ActionResult form_3b()
+        {
+            return View();
+        }
+        public ActionResult form_3c()
         {
             return View();
         }

@@ -1,31 +1,163 @@
 ﻿@{
-    ViewBag.Title = "Form_1b";
+    ViewBag.Title = "form_1b";
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>Form 1b</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!DOCTYPE html>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @*<meta name="viewport" content="width=device-width" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form id="myForm">
+
+                <div class="row remove-padding">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                        <div class="col-md-2 add-border return-button">
+                            <i class="fa fa-angle-double-left"></i>
+                            <i>Return to Menu</i>
+                        </div>
+                    </a>
+                </div>
+                <br />
+
+                <div class="col-md-12">
+                    <p class="h3"><strong>Civil Registry Form No. 1B</strong></p>
+                    <p class="h4">(Birth-not Available)</p>
+                    <br />
+                </div>
+
+                <div class="row add-border">
+
+                    <div class="col-md-4">
+                        <div class="col-md-12 add-border">
+                            <p class="h4"><strong>Transaction Details</strong></p><br />
+                            <div class="form-group">
+                                <label>Issued To</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Officer Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Officer Title</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Verifier Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Verifier Title</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Amount Paid</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>O.R. Number</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="Date Paid">
+                                <label>Issued To</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="col-md-12 add-border">
+                            <p class="h4"><strong>Form Details</strong></p><br />
+                            <div class="col-md-12 form-group">
+                                <label>Date</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label>Name of Child</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label>Date of Birth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Name of Father</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Name of Mother</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label>Records of Birth for Year</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-3 " style="float:right;">
+                        <div class="col-md-12">
+                            <input type="Submit" value="Submit" class="btn btn-block btn-primary" id="btnSubmit" />
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+
+    <script type="text/javascript">
+        var date = new Date();
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+        var optSimple = {
+            format: 'mm-dd-yyyy',
+            todayHighlight: true,
+            orientation: 'bottom right',
+            autoclose: true,
+            inline: true,
+        };
+
+        $('#entry').datepicker(optSimple);
+        $('#entry').datepicker('setDate', today);
+
+        $(document).ready(function () {
+            $("#btnSubmit").click(function () {
+                debugger
+                var data = $("#myForm").serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/form_1a",
+                    data: data,
+                    success: function (response) {
+                        alert("Successful");
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

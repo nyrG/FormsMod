@@ -7,137 +7,160 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />   
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @*<meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
 </head>
-<body>
-    <div class="container" style="width:40%;margin-top:2%">
-        <form id="myForm">
-            Fill-up All Fields
-            <table>
-               
-                <tr>
-                    <td>Date</td>
-                    <td>:</td>
-                    
-                    <td>@Html.TextBoxFor(model => model.entry, new { @class = "form-control" , @id="entry"})</td>
-                </tr>
-                <tr>
-                    <td>Page</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.page, new { @class = "form-control", @placeholder = "Page Number" })</td>
-                </tr>
-                <tr>
-                    <td>Book Number</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.book, new { @class = "form-control", @placeholder = "Book Number" })</td>
-                </tr>
-                <tr>
-                    <td>LCR Registry Number</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.lcr_reg_no, new { @class = "form-control", @placeholder = "LCR Registration Number" })</td>
-                </tr>
-                <tr>
-                    <td>Date of Registration</td>
-                    <td>:</td>
-                    <td>@Html.EditorFor(model => model.date_of_reg, new { @class = "datepicker", @placeholder = "Date of Registration" })</td>
-                </tr>
-                <tr>
-                    <td>Name of Child</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.name_child, new { @class = "form-control", @placeholder = "Name of Child" })</td>
-                </tr>
-                <tr>
-                    <td>Sex</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.sex, new { @class = "form-control", @placeholder = "Sex" })</td>
-                </tr>
-                <tr>
-                    <td>Date of Birth</td>
-                    <td>:</td>
-                    <td>@Html.EditorFor(model => model.date_of_birth, new { @class = "datepicker", @placeholder = "Date of Birth" })</td>
-                </tr>
-                <tr>
-                    <td>Place of Birth</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.place_of_birth, new { @class = "form-control", @placeholder = "Place of Birth" })</td>
-                </tr>
-                <tr>
-                    <td>Name of Mother</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.name_of_mother, new { @class = "form-control", @placeholder = "Name of Mother" })</td>
-                </tr>
-                <tr>
-                    <td>Citizenship of Mother</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.citizenship_of_mother, new { @class = "form-control", @placeholder = "Citizenship of Mother" })</td>
-                </tr>
-                <tr>
-                    <td>Name of Father</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.name_of_father, new { @class = "form-control", @placeholder = "Name of Father" })</td>
-                </tr>
-                <tr>
-                    <td>Citizenship of Father</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.citizenship_of_father, new { @class = "form-control", @placeholder = "Citizenship of Father" })</td>
-                </tr>
-                <tr>
-                    <td>Date of Marriage of Parents</td>
-                    <td>:</td>
-                    <td>@Html.EditorFor(model => model.date_of_marriage_of_parents, new { @class = "datepicker", @placeholder = "Date of Marriage of Parents" })</td>
-                </tr>
-                <tr>
-                    <td>Place of Marriage of Parents</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.place_of_marriage_of_parents, new { @class = "form-control", @placeholder = "Place of Marriage of Parents" })</td>
-                </tr>
-                <tr>
-                    <td>Issued to</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.issued_to, new { @class = "form-control", @placeholder = "Issued To" })</td>
-                </tr>
-                <tr>
-                    <td>Officer</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.officer_name, new { @class = "form-control", @placeholder = "Officer Name" })</td>
-                </tr>
-                <tr>
-                    <td>Officer Title</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.officer_title, new { @class = "form-control", @placeholder = "Officer Title" })</td>
-                </tr>
-                <tr>
-                    <td>Verifier</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.verifier_name, new { @class = "form-control", @placeholder = "Verifier Name" })</td>
-                </tr>
-                <tr>
-                    <td>Verifier Title</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.verifier_title, new { @class = "form-control", @placeholder = "Verifier Title" })</td>
-                </tr>
-                <tr>
-                    <td>Amount Paid</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.payment, new { @class = "form-control", @placeholder = "Payment" })</td>
-                </tr>
-                <tr>
-                    <td>O.R. Number</td>
-                    <td>:</td>
-                    <td>@Html.TextBoxFor(model => model.or_no, new { @class = "form-control", @placeholder = "OR Number" })</td>
-                </tr>
-                <tr>
-                    <td>Date Paid</td>
-                    <td>:</td>
-                    <td>@Html.EditorFor(model => model.date_paid, new { @class = "datepicker", @placeholder = "Date Paid" })</td>
-                </tr>
-            </table><br>
-            <input type="Submit" value="Submit" class="btn btn-block btn-primary" id="btnSubmit" />
-        </form>
 
+<body>
+    <div class="container">
+        <div class="row">
+            <form id="myForm" class="col-form">
+
+                <div class="row remove-padding">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+                        <div class="col-md-2 add-border return-button">
+                            <i class="fa fa-angle-double-left"></i>
+                            <i>Return to Menu</i>
+                        </div>
+                    </a>
+                </div>
+                <br />
+
+                <div class="col-md-12">
+                    <p class="h3"><strong>Civil Registry Form No. 1A</strong></p>
+                    <p class="h4">(Birth Available)</p>
+                    <br />
+                </div>
+
+                <div class="row add-border">
+
+                    <div class="col-md-4">
+                        <div class="col-md-12 add-border">
+                            <p class="h4"><strong>Transaction Details</strong></p><br />
+                            <div class="form-group">
+                                <label>Issued To</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Officer Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Officer Title</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Verifier Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Verifier Title</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Amount Paid</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>O.R. Number</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="Date Paid">
+                                <label>Issued To</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="col-md-12 add-border">
+                            <p class="h4"><strong>Form Details</strong></p><br />
+                            <div class="col-md-12 form-group">
+                                <label>Date</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Page</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Book Number</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>LCR Registry Number</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Date of Registration</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Name of Child</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Sex</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Date of Birth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Place of Birth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Name of Mother</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Citizenship of Mother</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Name of Father</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Citizenship of Father</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Date of Marriage of Parents</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Place of Marriage of Father</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-3 " style="float:right;">
+                        <div class="col-md-12">
+                            <input type="Submit" value="Submit" class="btn btn-block btn-primary" id="btnSubmit" />
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
+  
 
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/jquery-ui.min.js"></script>
@@ -175,16 +198,3 @@
     </script>
 </body>
 </html>
-01865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
